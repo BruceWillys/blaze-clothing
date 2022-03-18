@@ -22,7 +22,7 @@ class SignUp extends React.Component{
     handleSubmit = async event => {
         event.preventDefault();
 
-        const { displayName, email, password, confirmPassword } = this.state  ;
+        const { displayName, email, password, confirmPassword } = this.state;
 
         if (password !== confirmPassword) {
             alert('passwords do not match');
@@ -34,8 +34,12 @@ class SignUp extends React.Component{
                 email,
                 password
             );
-            await createUserProfileDocument(user, { displayName });
 
+            createUserProfileDocument(user, { displayName });
+            // removed the await function from the createUserProfileDoc,
+            // code seems to be working fine with firebase
+            // displayName = null in firebase is solved
+            
             this.setState({
                 displayName: '',
                 email: '',
