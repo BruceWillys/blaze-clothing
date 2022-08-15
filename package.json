@@ -7,7 +7,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "firebase": "^7.17.2",
-    "node-sass": "^4.14.1",
     "persist": "^0.2.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -46,8 +45,5 @@
   },
   "devDependencies": {
     "@types/react-redux": "^7.1.9"
-  },
-  "engines": {
-    "node": "14.x"
   }
 }
